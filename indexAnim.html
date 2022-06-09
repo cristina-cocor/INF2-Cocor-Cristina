@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>Solar System</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <h1 id="mesaj" style="color: white;">SURPRISE</h1>
+    <a href="index.html">Home</a>
+    <script style="color: white">
+        document.getElementById("mesaj").innerText="Welcome, "+localStorage.getItem("nume")+" "+localStorage.getItem("prenume")+"!";
+    </script>
+
+  <img class="object" src="images/sun1.png" alt="" id="sun">
+  <img class="object planet" src="images/mercury1.png" alt="" id="mercury">
+  <img class="object planet" src="images/venus1.png" alt="" id="venus">
+  <img class="object planet" src="images/earthh.png" alt="" id="earth">
+  <img class="object planet" src="images/mars1.png" alt="" id="mars">
+  <img class="object planet" src="images/jupiter1.png" alt="" id="jupiter">
+  <img class="object planet" src="images/saturn1.png" alt="" id="saturn">
+  <img class="object planet" src="images/uranus1.png" alt="" id="uranus">
+  <img class="object planet" src="images/neptune1.png" alt="" id="neptune">
+  <div class="object" id="moon"></div>
+
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object p-orbit"></div>
+  <div class="object" id="m-orbit"></div>
+
+  <img src="images/asteroid.png" class="object" alt="" id="belt">
+  <script src="javas/script.js"></script>
+</body>
+  
+</html>

@@ -1,0 +1,6 @@
+<h1>Fun facts about The Solar System!</h1>
+<p>You can't stand on Uranus</p>
+<p>The whole of Mars is as cold as the South Pole</p>
+<p>Saturn's rings are 90% water</p>
+<p>Jupiter's largest moon has a salty ocean that contains more water than on Earth</p>
+<p>Mercury takes roughly three Earth months to orbit the Sun</p>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <h1>Here are a few things about me</h1>
+    <h3 style="text-align:center">Hi there! My name is Cristina and I am a Computer Science student. 
+        In my free time I enjoy reading about our mighty Universe and that's why I decided to dedicate a blog to our Solar System.
+        Enjoy!</h3>
+
+    
+    <!-- <img src="images/abt.png" alt="scientist vector"> -->
+    <div id="divSVG">
+    </div>
+    <div><svg id="mySVG" width="2000" height="2000"></svg> </div>
+
+    <script>
+        const divSVG= document.getElementById("divSVG");
+        const nsSVG="http://www.w3.org/2000/svg";
+        let e = document.createElementNS(nsSVG, "svg");
+        e.setAttribute("width",80);
+        e.setAttribute("height", 100);
+        e.setAttribute("style", "border:1px white");
+        let obiect = document.createElementNS(nsSVG, "circle");
+        obiect.setAttribute("cx",50);
+        obiect.setAttribute("cy",100);
+        obiect.setAttribute("r",10);
+        e.append(obiect);
+        // divSVG.append(e);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $.get("https://mgx17.github.io/AJAX/input.json", function(data){
+            //console.log(data);
+            DrawData(data);
+        })
+
+        function DrawData(objList){
+            const unitate=110;
+            const mySVG= document.getElementById("mySVG") //se mai poate scrie $("#mySVG")
+            for(let punct of objList.Points){
+                let cerc = document.createElementNS(nsSVG, "circle");
+                cerc.setAttribute("cx", punct.x*unitate);
+                cerc.setAttribute("cy", punct.y*unitate);
+                cerc.setAttribute("r", 5);
+                cerc.setAttribute("style", "fill:white; width:2px");
+                mySVG.append(cerc);
+            }
+        }
+    </script>
+</body>
+</html>
